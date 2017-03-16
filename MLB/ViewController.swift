@@ -9,10 +9,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let delegate = NSApplication.shared().delegate as! AppDelegate
+        let context = delegate.managedObjectContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
+        let results = try! context.fetch(request) as! [NSManagedObject]
+        print(results.count)
         // Do any additional setup after loading the view.
     }
 
@@ -22,6 +26,7 @@ class ViewController: NSViewController {
         }
     }
 
+    
 
 }
 
