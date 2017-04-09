@@ -14,6 +14,27 @@
 		A46D729C1E79F8C700CF0369 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D729A1E79F8C700CF0369 /* Main.storyboard */; };
 		A46D72A71E79F8C700CF0369 /* MLBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72A61E79F8C700CF0369 /* MLBTests.swift */; };
 		A46D72B21E79F8C700CF0369 /* MLBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72B11E79F8C700CF0369 /* MLBUITests.swift */; };
+		A46D72D51E80D59700CF0369 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72D41E80D59700CF0369 /* AddStudent.swift */; };
+		A46D72D61E80D59700CF0369 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72D41E80D59700CF0369 /* AddStudent.swift */; };
+		A46D72D71E80D59700CF0369 /* AddStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72D41E80D59700CF0369 /* AddStudent.swift */; };
+		A46D72DC1E92E8EB00CF0369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72911E79F8C700CF0369 /* AppDelegate.swift */; };
+		A46D72DD1E92E8F700CF0369 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72911E79F8C700CF0369 /* AppDelegate.swift */; };
+		A46D73021E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */; };
+		A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */; };
+		A46D73041E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */; };
+		A46D73051E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */; };
+		A46D73061E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */; };
+		A46D73071E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */; };
+		A46D73081E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */; };
+		A46D73091E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */; };
+		A46D730A1E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */; };
+		A46D730B1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */; };
+		A46D730C1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */; };
+		A46D730D1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */; };
+		A46D730F1E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
+		A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
+		A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
+		A46D73121E96F90900CF0369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72931E79F8C700CF0369 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +68,13 @@
 		A46D72AD1E79F8C700CF0369 /* MLBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46D72B11E79F8C700CF0369 /* MLBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLBUITests.swift; sourceTree = "<group>"; };
 		A46D72B31E79F8C700CF0369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46D72BF1E7DD80200CF0369 /* MLB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLB.entitlements; sourceTree = "<group>"; };
+		A46D72D41E80D59700CF0369 /* AddStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
+		A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A46D730E1E95A28700CF0369 /* RemoveStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveStudent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +105,10 @@
 		A46D72851E79F8C700CF0369 = {
 			isa = PBXGroup;
 			children = (
+				A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */,
+				A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */,
+				A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */,
+				A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */,
 				A46D72901E79F8C700CF0369 /* MLB */,
 				A46D72A51E79F8C700CF0369 /* MLBTests */,
 				A46D72B01E79F8C700CF0369 /* MLBUITests */,
@@ -97,8 +129,11 @@
 		A46D72901E79F8C700CF0369 /* MLB */ = {
 			isa = PBXGroup;
 			children = (
+				A46D72BF1E7DD80200CF0369 /* MLB.entitlements */,
+				A46D72D41E80D59700CF0369 /* AddStudent.swift */,
 				A46D72911E79F8C700CF0369 /* AppDelegate.swift */,
 				A46D72931E79F8C700CF0369 /* ViewController.swift */,
+				A46D730E1E95A28700CF0369 /* RemoveStudent.swift */,
 				A46D72981E79F8C700CF0369 /* Assets.xcassets */,
 				A46D729A1E79F8C700CF0369 /* Main.storyboard */,
 				A46D729D1E79F8C700CF0369 /* Info.plist */,
@@ -195,6 +230,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 9E7Y9QZC52;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					A46D72A11E79F8C700CF0369 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -261,9 +301,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46D73051E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */,
+				A46D730B1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A46D72971E79F8C700CF0369 /* MLB.xcdatamodeld in Sources */,
+				A46D73081E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
 				A46D72941E79F8C700CF0369 /* ViewController.swift in Sources */,
+				A46D730F1E95A28700CF0369 /* RemoveStudent.swift in Sources */,
 				A46D72921E79F8C700CF0369 /* AppDelegate.swift in Sources */,
+				A46D72D51E80D59700CF0369 /* AddStudent.swift in Sources */,
+				A46D73021E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46D72DC1E92E8EB00CF0369 /* AppDelegate.swift in Sources */,
+				A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
+				A46D730C1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
+				A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */,
 				A46D72A71E79F8C700CF0369 /* MLBTests.swift in Sources */,
+				A46D72D61E80D59700CF0369 /* AddStudent.swift in Sources */,
+				A46D73061E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */,
+				A46D73091E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +332,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46D73121E96F90900CF0369 /* ViewController.swift in Sources */,
+				A46D72DD1E92E8F700CF0369 /* AppDelegate.swift in Sources */,
+				A46D73041E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
+				A46D730D1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
+				A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */,
 				A46D72B21E79F8C700CF0369 /* MLBUITests.swift in Sources */,
+				A46D72D71E80D59700CF0369 /* AddStudent.swift in Sources */,
+				A46D73071E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */,
+				A46D730A1E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +465,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MLB/MLB.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9E7Y9QZC52;
 				INFOPLIST_FILE = MLB/Info.plist;
@@ -418,6 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MLB/MLB.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9E7Y9QZC52;
 				INFOPLIST_FILE = MLB/Info.plist;
@@ -509,6 +572,7 @@
 				A46D72B81E79F8C700CF0369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A46D72B91E79F8C700CF0369 /* Build configuration list for PBXNativeTarget "MLBTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +581,7 @@
 				A46D72BB1E79F8C700CF0369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A46D72BC1E79F8C700CF0369 /* Build configuration list for PBXNativeTarget "MLBUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +590,7 @@
 				A46D72BE1E79F8C700CF0369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
