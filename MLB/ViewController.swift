@@ -88,8 +88,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         
     }
     
-    func getLessonsForStudent(_ Student:s) -> NSSet {
-        
+    func getLessonsForStudent(_ s:Student) -> NSSet {
+        return NSSet(array: [])
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
