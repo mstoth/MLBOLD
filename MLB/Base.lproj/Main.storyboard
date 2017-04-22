@@ -849,6 +849,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="addLesson:" target="XfG-lQ-9wD" id="2p7-Nu-5Y9"/>
+                                    <segue destination="lgL-Gi-ORA" kind="show" id="cvS-pa-RjK"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFG-Sq-h3f">
@@ -891,7 +892,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.5" y="829.5"/>
+            <point key="canvasLocation" x="75" y="830"/>
         </scene>
         <!--Remove Student-->
         <scene sceneID="FVo-qJ-8fT">
@@ -1030,54 +1031,42 @@
             </objects>
             <point key="canvasLocation" x="703" y="829"/>
         </scene>
-        <!--Tab View Controller-->
-        <scene sceneID="V3c-rh-6nP">
+        <!--Lessons-->
+        <scene sceneID="wDV-zV-rbv">
             <objects>
-                <tabViewController selectedTabViewItemIndex="1" id="Cm4-ly-tAQ" sceneMemberID="viewController">
-                    <tabViewItems>
-                        <tabViewItem identifier="" id="uke-dZ-bFv"/>
-                        <tabViewItem identifier="" id="yOB-Ss-qWy"/>
-                    </tabViewItems>
-                    <tabView key="tabView" type="noTabsNoBorder" id="lXT-dn-wbI">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
-                        <tabViewItems/>
-                    </tabView>
-                    <connections>
-                        <segue destination="crU-5p-6Am" kind="relationship" relationship="tabItems" id="N5Q-1G-iQR"/>
-                        <segue destination="LCh-ul-fYN" kind="relationship" relationship="tabItems" id="rpx-We-0ir"/>
-                    </connections>
-                </tabViewController>
-                <customObject id="YjH-FA-fXW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="662" y="1204"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eYw-gJ-q3y">
-            <objects>
-                <viewController id="crU-5p-6Am" sceneMemberID="viewController">
-                    <view key="view" id="WBN-KW-g7l">
+                <pagecontroller title="Lessons" id="lgL-Gi-ORA" customClass="LessonPageController" customModule="MLB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="2Ce-fo-Kw4">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </view>
-                </viewController>
-                <customObject id="Lpu-TW-Xdv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                </pagecontroller>
+                <customObject id="n3N-nj-aHl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="1023"/>
+            <point key="canvasLocation" x="693" y="1331"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xdI-W5-eo9">
+        <!--Lesson View-->
+        <scene sceneID="yLO-YM-OoH">
             <objects>
-                <viewController id="LCh-ul-fYN" sceneMemberID="viewController">
-                    <view key="view" id="kLL-mM-dm9">
+                <viewController title="Lesson View" storyboardIdentifier="LessonViewID" id="6T9-mp-PFL" customClass="LessonViewController" customModule="MLB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="LessonViewID" id="tfi-6h-7Sg">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1Y-st-H4s">
+                                <rect key="frame" x="20" y="258" width="96" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Date" drawsBackground="YES" id="U36-xW-oG3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
                     </view>
                 </viewController>
-                <customObject id="oaa-yW-Ra8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="QrL-6h-NpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1332" y="1384"/>
+            <point key="canvasLocation" x="896" y="1714"/>
         </scene>
         <!--Add Student-->
         <scene sceneID="jRG-nb-zdp">

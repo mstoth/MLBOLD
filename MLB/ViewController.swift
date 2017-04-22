@@ -82,6 +82,10 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         return results
     }
     
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        print("In performSegue");
+    }
+    
     @IBAction func addLesson(_ sender: Any) {
         let s = getStudents()[studentTableView.selectedRow] as Student
         let lsns = getLessonsForStudent(s)

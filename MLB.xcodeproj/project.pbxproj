@@ -35,6 +35,14 @@
 		A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
 		A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
 		A46D73121E96F90900CF0369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72931E79F8C700CF0369 /* ViewController.swift */; };
+		A4CE25771EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
+		A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
+		A4CE25791EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
+		A4CE257A1EA388C10011EEB3 /* LessonPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CE25761EA388C10011EEB3 /* LessonPageController.xib */; };
+		A4CE257B1EA388C10011EEB3 /* LessonPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CE25761EA388C10011EEB3 /* LessonPageController.xib */; };
+		A4CE257C1EA388C10011EEB3 /* LessonPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CE25761EA388C10011EEB3 /* LessonPageController.xib */; };
+		A4CE25861EA96C8D0011EEB3 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */; };
+		A4CE25871EA96DC50011EEB3 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +83,9 @@
 		A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A46D730E1E95A28700CF0369 /* RemoveStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveStudent.swift; sourceTree = "<group>"; };
+		A4CE25751EA388C10011EEB3 /* LessonPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonPageController.swift; sourceTree = "<group>"; };
+		A4CE25761EA388C10011EEB3 /* LessonPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonPageController.xib; sourceTree = "<group>"; };
+		A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +116,8 @@
 		A46D72851E79F8C700CF0369 = {
 			isa = PBXGroup;
 			children = (
+				A4CE25751EA388C10011EEB3 /* LessonPageController.swift */,
+				A4CE25761EA388C10011EEB3 /* LessonPageController.xib */,
 				A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */,
 				A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */,
 				A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */,
@@ -136,6 +149,7 @@
 				A46D730E1E95A28700CF0369 /* RemoveStudent.swift */,
 				A46D72981E79F8C700CF0369 /* Assets.xcassets */,
 				A46D729A1E79F8C700CF0369 /* Main.storyboard */,
+				A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */,
 				A46D729D1E79F8C700CF0369 /* Info.plist */,
 				A46D72951E79F8C700CF0369 /* MLB.xcdatamodeld */,
 			);
@@ -277,6 +291,7 @@
 			files = (
 				A46D72991E79F8C700CF0369 /* Assets.xcassets in Resources */,
 				A46D729C1E79F8C700CF0369 /* Main.storyboard in Resources */,
+				A4CE257A1EA388C10011EEB3 /* LessonPageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CE257B1EA388C10011EEB3 /* LessonPageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CE257C1EA388C10011EEB3 /* LessonPageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +322,10 @@
 				A46D730B1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A46D72971E79F8C700CF0369 /* MLB.xcdatamodeld in Sources */,
 				A46D73081E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
+				A4CE25861EA96C8D0011EEB3 /* LessonViewController.swift in Sources */,
 				A46D72941E79F8C700CF0369 /* ViewController.swift in Sources */,
 				A46D730F1E95A28700CF0369 /* RemoveStudent.swift in Sources */,
+				A4CE25771EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D72921E79F8C700CF0369 /* AppDelegate.swift in Sources */,
 				A46D72D51E80D59700CF0369 /* AddStudent.swift in Sources */,
 				A46D73021E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
@@ -318,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A46D72DC1E92E8EB00CF0369 /* AppDelegate.swift in Sources */,
+				A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
 				A46D730C1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */,
@@ -332,12 +352,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CE25871EA96DC50011EEB3 /* LessonViewController.swift in Sources */,
 				A46D73121E96F90900CF0369 /* ViewController.swift in Sources */,
 				A46D72DD1E92E8F700CF0369 /* AppDelegate.swift in Sources */,
 				A46D73041E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
 				A46D730D1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */,
 				A46D72B21E79F8C700CF0369 /* MLBUITests.swift in Sources */,
+				A4CE25791EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D72D71E80D59700CF0369 /* AddStudent.swift in Sources */,
 				A46D73071E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */,
 				A46D730A1E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
