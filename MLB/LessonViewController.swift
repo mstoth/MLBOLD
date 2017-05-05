@@ -10,10 +10,14 @@ import Foundation
 import Cocoa
 import Contacts
 
-class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, NSDatePickerCellDelegate {
+    
+    @IBOutlet weak var datePicker: NSDatePicker!
     
     override func viewDidLoad() {
-        print("in view did load")
+        let defaults = UserDefaults.standard
+        var lessonLength = defaults.integer(forKey: "defaultLessonLength")
+        
     }
     
 }

@@ -849,7 +849,7 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="addLesson:" target="XfG-lQ-9wD" id="2p7-Nu-5Y9"/>
-                                    <segue destination="lgL-Gi-ORA" kind="show" id="cvS-pa-RjK"/>
+                                    <segue destination="lgL-Gi-ORA" kind="show" identifier="NewLessonSegueID" id="cvS-pa-RjK"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lFG-Sq-h3f">
@@ -1034,7 +1034,7 @@
         <!--Lessons-->
         <scene sceneID="wDV-zV-rbv">
             <objects>
-                <pagecontroller title="Lessons" id="lgL-Gi-ORA" customClass="LessonPageController" customModule="MLB" customModuleProvider="target" sceneMemberID="viewController">
+                <pagecontroller title="Lessons" storyboardIdentifier="LessonPageControllerID" id="lgL-Gi-ORA" customClass="LessonPageController" customModule="MLB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="2Ce-fo-Kw4">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1052,17 +1052,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1Y-st-H4s">
-                                <rect key="frame" x="20" y="258" width="96" height="22"/>
+                            <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ti-pu-ItN">
+                                <rect key="frame" x="134" y="257" width="185" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Date" drawsBackground="YES" id="U36-xW-oG3">
+                                <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="bxA-GA-yDE">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                    <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
+                                        <!--1982-02-12 08:00:00 -0800-->
+                                        <timeZone key="timeZone" name="US/Pacific"/>
+                                    </calendarDate>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="6T9-mp-PFL" id="GKR-mJ-iWv"/>
+                                    </connections>
+                                </datePickerCell>
+                            </datePicker>
+                            <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3G-Ef-gxI">
+                                <rect key="frame" x="131" y="224" width="19" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <stepperCell key="cell" continuous="YES" alignment="left" increment="15" minValue="15" maxValue="120" doubleValue="30" id="JjC-JR-7v1"/>
+                            </stepper>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="7ti-pu-ItN" id="VD7-EO-VKf"/>
+                    </connections>
                 </viewController>
                 <customObject id="QrL-6h-NpU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Lesson" representedClassName="Lesson" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Integer 32" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="paid" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="lessons" inverseEntity="Student" syncable="YES"/>
@@ -20,7 +20,7 @@
         <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="student" inverseEntity="Lesson" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Lesson" positionX="0" positionY="117" width="128" height="103"/>
+        <element name="Lesson" positionX="0" positionY="117" width="128" height="120"/>
         <element name="Student" positionX="160" positionY="186" width="128" height="193"/>
     </elements>
 </model>

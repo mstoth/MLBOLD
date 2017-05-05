@@ -14,6 +14,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet weak var numStudentsLabel: NSTextField!
     @IBOutlet weak var lessonTableView: NSTableView!
     @IBOutlet weak var studentTableView: NSTableView!
+    var selectedStudent:Student? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,18 +83,30 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         return results
     }
     
+    
+    
     override func performSegue(withIdentifier identifier: String, sender: Any?) {
         print("In performSegue");
+        if (identifier == "LessonPageControllerID") {
+            
+        }
     }
     
     @IBAction func addLesson(_ sender: Any) {
-        let s = getStudents()[studentTableView.selectedRow] as Student
-        let lsns = getLessonsForStudent(s)
-        
+        let i:Int = studentTableView.selectedRow
+        if (i>=0) {
+            let ss = getStudents()
+            
+            selectedStudent = ss[i] as Student
+            let lsns = getLessonsForStudent(selectedStudent!)
+        }
     }
     
-    func getLessonsForStudent(_ s:Student) -> NSSet {
-        return NSSet(array: [])
+    func getLessonsForStudent(_ s:Student) -> [Lesson] {
+        if (selectedStudent==nil) {
+            return []
+        }
+        return selectedStudent?.lessons?.allObjects as! [Lesson]
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
@@ -131,7 +144,18 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         }
     }
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        
+        if (segue.identifier == "NewLessonSegueID") {
+            guard let lessonPageViewController = segue.destinationController as? LessonPageController
+                else {
+                    return
+            }
+            let ss = getStudents()
+            let i = studentTableView.selectedRow
+            selectedStudent = ss[i] as Student
+
+            print(selectedStudent as Any)
+            lessonPageViewController.lessons = getLessonsForStudent(selectedStudent!) as [Lesson]
+        }
         guard let addStudentController = segue.destinationController
             as? AddStudent else {
                 guard let removeStudentController = segue.destinationController as? RemoveStudent else {

@@ -10,12 +10,16 @@ import Cocoa
 
 class LessonPageController: NSPageController, NSPageControllerDelegate {
 
+    var lessons:[Lesson] = [];
+    var student:Student? = nil;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
         self.delegate = self;
         self.arrangedObjects = orderedViewControllers
         self.selectedIndex = 0
+        
     }
     
     var orderedViewControllers: [NSViewController] = {
@@ -23,6 +27,11 @@ class LessonPageController: NSPageController, NSPageControllerDelegate {
                 NSStoryboard(name: "Main", bundle:nil).instantiateController(withIdentifier: "LessonViewID") as! LessonViewController,
                 ]
     }()
+    
+    func viewControllerForLesson(_ lsn:Lesson) -> LessonViewController {
+        let c = self.storyboard?.instantiateController(withIdentifier: "LessonViewControllerID") as! LessonViewController
+        return c
+    }
     
     func pageController(_ pageController: NSPageController, viewControllerForIdentifier identifier: String) -> NSViewController {
     return self.storyboard?.instantiateController(withIdentifier: identifier) as! LessonViewController
