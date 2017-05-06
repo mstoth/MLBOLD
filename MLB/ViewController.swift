@@ -96,7 +96,6 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let i:Int = studentTableView.selectedRow
         if (i>=0) {
             let ss = getStudents()
-            
             selectedStudent = ss[i] as Student
             let lsns = getLessonsForStudent(selectedStudent!)
         }

@@ -63,7 +63,7 @@ class RemoveStudent: NSViewController, NSTableViewDelegate, NSTableViewDataSourc
             if let cell = tableView.make(withIdentifier: "NameCell", owner: nil) as? NSTableCellView {
                 cell.textField?.stringValue = "\(s.firstName!) \(s.lastName!)"
                 if (s.image != nil) {
-                    cell.imageView?.image = NSImage(data: s.image as! Data)
+                    cell.imageView?.image = NSImage(data: s.image! as Data)
                 }
                 
                 return cell

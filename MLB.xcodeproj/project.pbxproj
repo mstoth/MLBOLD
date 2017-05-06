@@ -78,13 +78,13 @@
 		A46D72B31E79F8C700CF0369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46D72BF1E7DD80200CF0369 /* MLB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MLB.entitlements; sourceTree = "<group>"; };
 		A46D72D41E80D59700CF0369 /* AddStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudent.swift; sourceTree = "<group>"; };
-		A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataClass.swift"; path = "../Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Student+CoreDataProperties.swift"; path = "../Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lesson+CoreDataClass.swift"; path = "../Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lesson+CoreDataProperties.swift"; path = "../Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A46D730E1E95A28700CF0369 /* RemoveStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveStudent.swift; sourceTree = "<group>"; };
-		A4CE25751EA388C10011EEB3 /* LessonPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonPageController.swift; sourceTree = "<group>"; };
-		A4CE25761EA388C10011EEB3 /* LessonPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LessonPageController.xib; sourceTree = "<group>"; };
+		A4CE25751EA388C10011EEB3 /* LessonPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LessonPageController.swift; path = ../LessonPageController.swift; sourceTree = "<group>"; };
+		A4CE25761EA388C10011EEB3 /* LessonPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LessonPageController.xib; path = ../LessonPageController.xib; sourceTree = "<group>"; };
 		A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,12 +116,6 @@
 		A46D72851E79F8C700CF0369 = {
 			isa = PBXGroup;
 			children = (
-				A4CE25751EA388C10011EEB3 /* LessonPageController.swift */,
-				A4CE25761EA388C10011EEB3 /* LessonPageController.xib */,
-				A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */,
-				A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */,
-				A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */,
-				A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */,
 				A46D72901E79F8C700CF0369 /* MLB */,
 				A46D72A51E79F8C700CF0369 /* MLBTests */,
 				A46D72B01E79F8C700CF0369 /* MLBUITests */,
@@ -142,6 +136,12 @@
 		A46D72901E79F8C700CF0369 /* MLB */ = {
 			isa = PBXGroup;
 			children = (
+				A4CE25751EA388C10011EEB3 /* LessonPageController.swift */,
+				A4CE25761EA388C10011EEB3 /* LessonPageController.xib */,
+				A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */,
+				A46D72FF1E94539E00CF0369 /* Student+CoreDataProperties.swift */,
+				A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */,
+				A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */,
 				A46D72BF1E7DD80200CF0369 /* MLB.entitlements */,
 				A46D72D41E80D59700CF0369 /* AddStudent.swift */,
 				A46D72911E79F8C700CF0369 /* AppDelegate.swift */,
