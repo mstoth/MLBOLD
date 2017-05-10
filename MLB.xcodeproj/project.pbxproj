@@ -35,6 +35,10 @@
 		A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
 		A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D730E1E95A28700CF0369 /* RemoveStudent.swift */; };
 		A46D73121E96F90900CF0369 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72931E79F8C700CF0369 /* ViewController.swift */; };
+		A49B0D981EC1215800EF972E /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */; };
+		A49B0D991EC1218500EF972E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D729A1E79F8C700CF0369 /* Main.storyboard */; };
+		A49B0D9A1EC1218D00EF972E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D729A1E79F8C700CF0369 /* Main.storyboard */; };
+		A49B0D9B1EC1219C00EF972E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72931E79F8C700CF0369 /* ViewController.swift */; };
 		A4CE25771EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
 		A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
 		A4CE25791EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
@@ -300,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4CE257B1EA388C10011EEB3 /* LessonPageController.xib in Resources */,
+				A49B0D991EC1218500EF972E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4CE257C1EA388C10011EEB3 /* LessonPageController.xib in Resources */,
+				A49B0D9A1EC1218D00EF972E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +346,12 @@
 				A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
 				A46D730C1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
+				A49B0D9B1EC1219C00EF972E /* ViewController.swift in Sources */,
 				A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */,
 				A46D72A71E79F8C700CF0369 /* MLBTests.swift in Sources */,
 				A46D72D61E80D59700CF0369 /* AddStudent.swift in Sources */,
 				A46D73061E94539E00CF0369 /* Student+CoreDataProperties.swift in Sources */,
+				A49B0D981EC1215800EF972E /* LessonViewController.swift in Sources */,
 				A46D73091E94539E00CF0369 /* Lesson+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet weak var numStudentsLabel: NSTextField!
     @IBOutlet weak var lessonTableView: NSTableView!
     @IBOutlet weak var studentTableView: NSTableView!
+    
     var selectedStudent:Student? = nil;
     
     override func viewDidLoad() {
@@ -150,10 +151,13 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             }
             let ss = getStudents()
             let i = studentTableView.selectedRow
+            if (i<0) {
+                return
+            }
             selectedStudent = ss[i] as Student
 
-            print(selectedStudent as Any)
             lessonPageViewController.lessons = getLessonsForStudent(selectedStudent!) as [Lesson]
+            lessonPageViewController.student = selectedStudent
         }
         guard let addStudentController = segue.destinationController
             as? AddStudent else {

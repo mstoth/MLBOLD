@@ -19,7 +19,6 @@ class LessonPageController: NSPageController, NSPageControllerDelegate {
         self.delegate = self;
         self.arrangedObjects = orderedViewControllers
         self.selectedIndex = 0
-        
     }
     
     var orderedViewControllers: [NSViewController] = {
@@ -34,7 +33,10 @@ class LessonPageController: NSPageController, NSPageControllerDelegate {
     }
     
     func pageController(_ pageController: NSPageController, viewControllerForIdentifier identifier: String) -> NSViewController {
-    return self.storyboard?.instantiateController(withIdentifier: identifier) as! LessonViewController
+        
+        let lvc = self.storyboard?.instantiateController(withIdentifier: identifier) as! LessonViewController
+        lvc.student = student
+        return lvc
     }
     
     func pageController(_ pageController: NSPageController, identifierFor object: Any) -> String {
