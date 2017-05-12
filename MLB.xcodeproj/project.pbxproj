@@ -39,6 +39,8 @@
 		A49B0D991EC1218500EF972E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D729A1E79F8C700CF0369 /* Main.storyboard */; };
 		A49B0D9A1EC1218D00EF972E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D729A1E79F8C700CF0369 /* Main.storyboard */; };
 		A49B0D9B1EC1219C00EF972E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D72931E79F8C700CF0369 /* ViewController.swift */; };
+		A49B0D9D1EC5C2C400EF972E /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B0D9C1EC5C2C400EF972E /* extensions.swift */; };
+		A49B0D9E1EC5C37D00EF972E /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B0D9C1EC5C2C400EF972E /* extensions.swift */; };
 		A4CE25771EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
 		A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
 		A4CE25791EA388C10011EEB3 /* LessonPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25751EA388C10011EEB3 /* LessonPageController.swift */; };
@@ -87,6 +89,7 @@
 		A46D73001E94539E00CF0369 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lesson+CoreDataClass.swift"; path = "../Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A46D73011E94539E00CF0369 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Lesson+CoreDataProperties.swift"; path = "../Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A46D730E1E95A28700CF0369 /* RemoveStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveStudent.swift; sourceTree = "<group>"; };
+		A49B0D9C1EC5C2C400EF972E /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = extensions.swift; path = ../extensions.swift; sourceTree = "<group>"; };
 		A4CE25751EA388C10011EEB3 /* LessonPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LessonPageController.swift; path = ../LessonPageController.swift; sourceTree = "<group>"; };
 		A4CE25761EA388C10011EEB3 /* LessonPageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LessonPageController.xib; path = ../LessonPageController.xib; sourceTree = "<group>"; };
 		A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 		A46D72901E79F8C700CF0369 /* MLB */ = {
 			isa = PBXGroup;
 			children = (
+				A49B0D9C1EC5C2C400EF972E /* extensions.swift */,
 				A4CE25751EA388C10011EEB3 /* LessonPageController.swift */,
 				A4CE25761EA388C10011EEB3 /* LessonPageController.xib */,
 				A46D72FE1E94539E00CF0369 /* Student+CoreDataClass.swift */,
@@ -335,6 +339,7 @@
 				A46D72921E79F8C700CF0369 /* AppDelegate.swift in Sources */,
 				A46D72D51E80D59700CF0369 /* AddStudent.swift in Sources */,
 				A46D73021E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
+				A49B0D9D1EC5C2C400EF972E /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49B0D9E1EC5C37D00EF972E /* extensions.swift in Sources */,
 				A46D72DC1E92E8EB00CF0369 /* AppDelegate.swift in Sources */,
 				A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,

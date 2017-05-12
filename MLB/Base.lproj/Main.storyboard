@@ -1097,9 +1097,21 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjI-0E-ORQ">
+                                <rect key="frame" x="191" y="140" width="52" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Create" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irj-bL-oo6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="createLesson:" target="6T9-mp-PFL" id="HUi-yC-62K"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="createButton" destination="yjI-0E-ORQ" id="Y25-Zo-UnX"/>
                         <outlet property="datePicker" destination="7ti-pu-ItN" id="VD7-EO-VKf"/>
                         <outlet property="durationTextField" destination="p5V-lx-ZqM" id="nfr-Oc-7op"/>
                         <outlet property="headingLabel" destination="GPc-F2-ffG" id="iQs-MZ-MdO"/>

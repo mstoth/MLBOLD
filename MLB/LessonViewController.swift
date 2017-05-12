@@ -10,6 +10,19 @@ import Foundation
 import Cocoa
 import Contacts
 
+extension NSManagedObject {
+    
+    func addObject(value: NSManagedObject, forKey key: String) {
+        let items = self.mutableSetValue(forKey: key)
+        items.add(value)
+    }
+    
+    func removeObject(value: NSManagedObject, forKey key: String) {
+        let items = self.mutableSetValue(forKey: key)
+        items.remove(value)
+    }
+}
+
 class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, NSDatePickerCellDelegate, NSTextFieldDelegate {
     
     
@@ -20,6 +33,24 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         durationTextField.stringValue = stepper.stringValue + " Minutes"
     }
     
+    @IBAction func createLesson(_ sender: Any) {
+        let delegate = NSApplication.shared().delegate as! AppDelegate
+        let context = delegate.managedObjectContext
+        if ((student?.lessons?.count)!>0) {
+            for lsn in (student?.lessons)! {
+                if ((lsn as! Lesson).date == datePicker.dateValue as NSDate) {
+                    return
+                }
+            }
+        }
+        let lsn = NSEntityDescription.insertNewObject(forEntityName: "Lesson", into: context) as! Lesson
+        lsn.date = datePicker.dateValue as NSDate
+        let numberFormatter = NumberFormatter()
+        let number = numberFormatter.number(from: stepper.stringValue)
+        lsn.length = (number?.floatValue)!
+        student?.addObject(value:lsn,forKey: "lessons")
+        try! context.save()
+    }
     @IBOutlet weak var datePicker: NSDatePicker!
     @IBOutlet weak var durationTextField: NSTextField!
     @IBOutlet weak var stepper: NSStepper!
@@ -33,7 +64,7 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         }
         headingLabel.stringValue = "Lesson for " + (student?.firstName)! + " " + (student?.lastName)!
         
-        datePicker.dateValue = Date()
+        datePicker.dateValue =  Date()
     }
     
 }
