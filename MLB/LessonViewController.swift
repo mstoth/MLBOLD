@@ -47,10 +47,24 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         lsn.date = datePicker.dateValue as NSDate
         let numberFormatter = NumberFormatter()
         let number = numberFormatter.number(from: stepper.stringValue)
-        lsn.length = (number?.floatValue)!
+        lsn.length = Int32(number!.intValue)
+        
         student?.addObject(value:lsn,forKey: "lessons")
-        try! context.save()
+        do {
+            try context.save()
+            let a = NSAlert()
+            a.alertStyle = NSAlertStyle.informational
+            a.messageText = "Saved lesson \(student?.lessons?.count)"
+            a.runModal()
+        } catch {
+            let a = NSAlert()
+            a.alertStyle = NSAlertStyle.warning
+            a.messageText = "Unable to save lesson"
+            a.runModal()
+        }
     }
+    
+    
     @IBOutlet weak var datePicker: NSDatePicker!
     @IBOutlet weak var durationTextField: NSTextField!
     @IBOutlet weak var stepper: NSStepper!

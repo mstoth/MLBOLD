@@ -11,6 +11,8 @@ import Contacts
 
 class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     
+    var students:[Student] = []
+    
     @IBOutlet weak var numStudentsLabel: NSTextField!
     @IBOutlet weak var lessonTableView: NSTableView!
     @IBOutlet weak var studentTableView: NSTableView!
@@ -25,6 +27,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let results = try! context.fetch(request) as! [Student]
         studentTableView.delegate = self;
         studentTableView.dataSource = self;
+        lessonTableView.delegate = self;
+        lessonTableView.dataSource = self;
         if (results.count == 0) { // there are no students
             let store = CNContactStore()
             store.requestAccess(for: CNEntityType.contacts, completionHandler: { (auth, error) in
@@ -40,36 +44,32 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         } else {
             numStudentsLabel.stringValue = "You have \(results.count) student."
         }
+        students = getStudents()
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
         if (tableView == studentTableView) {
             return numberOfStudents()
         } else {
+            let n = numberOfLessons()
+            print("\(n) lessons")
             return numberOfLessons()
         }
     }
     
     func numberOfStudents() -> Int {
-        let delegate = NSApplication.shared().delegate as! AppDelegate
-        let context = delegate.managedObjectContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
-        let results = try! context.fetch(request) as! [Student]
-        return results.count
+        return students.count
     }
     
     func numberOfLessons() -> Int {
-        let delegate = NSApplication.shared().delegate as! AppDelegate
-        let context = delegate.managedObjectContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Lesson")
-        let results = try! context.fetch(request) as! [Lesson]
-        if (studentTableView.selectedRow < 0) {
+        if (studentTableView.selectedRow<0) {
             return 0
         }
-        let request4Students = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
-        let results4Students = try! context.fetch(request4Students) as! [Student]
-        let student = results4Students[studentTableView.selectedRow] as Student
-        return numberOfLessonsForStudent(stdnt: student)
+        if (students.count <= 0) {
+            return 0
+        }
+        return students[studentTableView.selectedRow].lessons!.count
+        
     }
     
     func numberOfLessonsForStudent(stdnt:Student) ->Int {
@@ -85,21 +85,15 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        print("In performSegue");
-        if (identifier == "LessonPageControllerID") {
-            
+    func tableView(tableView:NSTableView!, numberOfRowsInSection section: Int) -> Int {
+        if (tableView == studentTableView) {
+            return numberOfStudents()
         }
-    }
-    
-    @IBAction func addLesson(_ sender: Any) {
-        let i:Int = studentTableView.selectedRow
-        if (i>=0) {
-            let ss = getStudents()
-            selectedStudent = ss[i] as Student
-            let lsns = getLessonsForStudent(selectedStudent!)
+        if (tableView == lessonTableView) {
+            print("returning \(numberOfLessons()) for number of lessons.")
+            return numberOfLessons()
         }
+        return 0
     }
     
     func getLessonsForStudent(_ s:Student) -> [Lesson] {
@@ -108,6 +102,12 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         }
         return selectedStudent?.lessons?.allObjects as! [Lesson]
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        selectedStudent = students[studentTableView.selectedRow]
+        lessonTableView.reloadData()
+    }
+    
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if (tableView == studentTableView) {
@@ -119,16 +119,12 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         }
         if (tableView == lessonTableView) {
             if let cell = tableView.make(withIdentifier: "MainLessonTableCellID", owner: nil) as? NSTableCellView {
-                let s = getStudents() as [Student]
-                let n = studentTableView.selectedRow
-                if (s.count == 0) {
-                    return nil
-                }
-                let ss = s[n] // get the selected student
-                var lsns = ss.lessons?.allObjects as! [Lesson]
+                var lsns = selectedStudent?.lessons?.allObjects as! [Lesson]
                 lsns.sort {($0.date as! Date) < ($1.date as! Date)}
                 let ds = lsns[row].date as! Date
                 let df = DateFormatter()
+                df.dateFormat = "dd/MM/yyyy hh:mm"
+                print(df.string(from:ds))
                 cell.textField?.stringValue = df.string(from: ds)
                 return cell
                 }

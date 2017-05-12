@@ -17,7 +17,7 @@ extension Lesson {
     }
 
     @NSManaged public var date: NSDate?
-    @NSManaged public var length: Float
+    @NSManaged public var length: Int32
     @NSManaged public var paid: Bool
     @NSManaged public var rate: Float
     @NSManaged public var student: Student?
