@@ -859,6 +859,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="removeLesson:" target="XfG-lQ-9wD" id="rY7-th-nQm"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="by4-Va-16f">
                                 <rect key="frame" x="14" y="54" width="116" height="32"/>
@@ -1098,7 +1101,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjI-0E-ORQ">
-                                <rect key="frame" x="191" y="140" width="52" height="19"/>
+                                <rect key="frame" x="134" y="140" width="52" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundRect" title="Create" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="irj-bL-oo6">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1108,9 +1111,21 @@
                                     <action selector="createLesson:" target="6T9-mp-PFL" id="HUi-yC-62K"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obw-lu-gQM">
+                                <rect key="frame" x="253" y="140" width="46" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="Close" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="si9-Ih-fDu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="cellTitle"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeWindow:" target="6T9-mp-PFL" id="CxQ-KP-Ldk"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="close" destination="obw-lu-gQM" id="TNB-dm-dZr"/>
                         <outlet property="createButton" destination="yjI-0E-ORQ" id="Y25-Zo-UnX"/>
                         <outlet property="datePicker" destination="7ti-pu-ItN" id="VD7-EO-VKf"/>
                         <outlet property="durationTextField" destination="p5V-lx-ZqM" id="nfr-Oc-7op"/>

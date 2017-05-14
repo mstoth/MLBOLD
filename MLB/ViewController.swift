@@ -18,6 +18,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     @IBOutlet weak var studentTableView: NSTableView!
     
     var selectedStudent:Student? = nil;
+    var selectedLesson:Lesson? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,16 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         students = getStudents()
     }
     
+    @IBAction func removeLesson(_ sender: Any) {
+        if (selectedLesson != nil) {
+            let delegate = NSApplication.shared().delegate as! AppDelegate
+            let context = delegate.managedObjectContext
+            context.delete(selectedLesson!)
+            try! context.save()
+            lessonTableView.reloadData()
+        }
+    }
+
     func numberOfRows(in tableView: NSTableView) -> Int {
         if (tableView == studentTableView) {
             return numberOfStudents()
@@ -104,8 +115,23 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
+        if (studentTableView.selectedRow < 0) {
+            lessonTableView.reloadData()
+            return
+        }
         selectedStudent = students[studentTableView.selectedRow]
-        lessonTableView.reloadData()
+        if (lessonTableView == notification.object as? NSTableView) {
+            let row = lessonTableView.selectedRow
+            if (row < 0) {
+                return
+            }
+            var lsns = selectedStudent?.lessons?.allObjects as! [Lesson]
+            lsns.sort {($0.date as! Date) < ($1.date as! Date)}
+            selectedLesson = lsns[row]
+            print(selectedLesson)
+        } else {
+            lessonTableView.reloadData()
+        }
     }
     
     

@@ -33,6 +33,9 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         durationTextField.stringValue = stepper.stringValue + " Minutes"
     }
     
+    @IBAction func closeWindow(_ sender: Any) {
+        self.view.window?.close()
+    }
     @IBAction func createLesson(_ sender: Any) {
         let delegate = NSApplication.shared().delegate as! AppDelegate
         let context = delegate.managedObjectContext
