@@ -69,6 +69,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
     }
     
     func numberOfStudents() -> Int {
+        let students = getStudents()
         return students.count
     }
     
@@ -77,6 +78,9 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             return 0
         }
         if (students.count <= 0) {
+            return 0
+        }
+        if (students[studentTableView.selectedRow].lessons == nil) {
             return 0
         }
         return students[studentTableView.selectedRow].lessons!.count
@@ -119,27 +123,28 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             lessonTableView.reloadData()
             return
         }
-        selectedStudent = students[studentTableView.selectedRow]
-        if (lessonTableView == notification.object as? NSTableView) {
-            let row = lessonTableView.selectedRow
-            if (row < 0) {
-                return
+        if (students.count > 0) {
+            selectedStudent = students[studentTableView.selectedRow]
+            if (lessonTableView == notification.object as? NSTableView) {
+                let row = lessonTableView.selectedRow
+                if (row < 0) {
+                    return
+                }
+                var lsns = selectedStudent?.lessons?.allObjects as! [Lesson]
+                lsns.sort {($0.date as! Date) < ($1.date as! Date)}
+                selectedLesson = lsns[row]
+            } else {
+                lessonTableView.reloadData()
             }
-            var lsns = selectedStudent?.lessons?.allObjects as! [Lesson]
-            lsns.sort {($0.date as! Date) < ($1.date as! Date)}
-            selectedLesson = lsns[row]
-            print(selectedLesson)
-        } else {
-            lessonTableView.reloadData()
         }
     }
     
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if (tableView == studentTableView) {
-            let s = getStudents()
+            let students = getStudents()
             if let cell = tableView.make(withIdentifier: "MainStudentTableCellID", owner: nil) as? NSTableCellView {
-                cell.textField?.stringValue = s[row].firstName! + " " + s[row].lastName!
+                cell.textField?.stringValue = students[row].firstName! + " " + students[row].lastName!
                 return cell
             }
         }
@@ -180,6 +185,7 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
 
             lessonPageViewController.lessons = getLessonsForStudent(selectedStudent!) as [Lesson]
             lessonPageViewController.student = selectedStudent
+            lessonPageViewController.lessonTable = lessonTableView
         }
         guard let addStudentController = segue.destinationController
             as? AddStudent else {
@@ -198,11 +204,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
         let delegate = NSApplication.shared().delegate as! AppDelegate
         let context = delegate.managedObjectContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Student")
-        studentTableView.delegate = self;
-        lessonTableView.delegate = self;
-        studentTableView.dataSource  = self;
-        lessonTableView.dataSource = self;
         studentTableView.reloadData();
+        lessonTableView.reloadData()
         let results = try! context.fetch(request) as! [NSManagedObject]
         if (results.count != 1) {
             numStudentsLabel.stringValue = "You have \(results.count) students."

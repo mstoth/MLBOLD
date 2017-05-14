@@ -12,6 +12,7 @@ class LessonPageController: NSPageController, NSPageControllerDelegate {
 
     var lessons:[Lesson] = [];
     var student:Student? = nil;
+    var lessonTable:NSTableView? = nil;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class LessonPageController: NSPageController, NSPageControllerDelegate {
         
         let lvc = self.storyboard?.instantiateController(withIdentifier: identifier) as! LessonViewController
         lvc.student = student
+        lvc.lessonTable = lessonTable
         return lvc
     }
     

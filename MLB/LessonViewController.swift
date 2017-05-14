@@ -27,6 +27,7 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
     
     
     var  student:Student?
+    var  lessonTable:NSTableView? = nil
     
     @IBOutlet weak var headingLabel: NSTextField!
     @IBAction func stepperChanged(_ sender: Any ) {
@@ -34,6 +35,7 @@ class LessonViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
     }
     
     @IBAction func closeWindow(_ sender: Any) {
+        lessonTable?.reloadData()
         self.view.window?.close()
     }
     @IBAction func createLesson(_ sender: Any) {
