@@ -123,8 +123,8 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
             lessonTableView.reloadData()
             return
         }
-        if (students.count > 0) {
-            selectedStudent = students[studentTableView.selectedRow]
+        if (getStudents().count > 0) {
+            selectedStudent = getStudents()[studentTableView.selectedRow]
             if (lessonTableView == notification.object as? NSTableView) {
                 let row = lessonTableView.selectedRow
                 if (row < 0) {

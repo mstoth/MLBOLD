@@ -47,6 +47,8 @@
 		A4CE257C1EA388C10011EEB3 /* LessonPageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4CE25761EA388C10011EEB3 /* LessonPageController.xib */; };
 		A4CE25861EA96C8D0011EEB3 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */; };
 		A4CE25871EA96DC50011EEB3 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CE25851EA96C8D0011EEB3 /* LessonViewController.swift */; };
+		A4CEEC251EC951B200FA3575 /* MLB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A46D72951E79F8C700CF0369 /* MLB.xcdatamodeld */; };
+		A4CEEC261EC951B300FA3575 /* MLB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A46D72951E79F8C700CF0369 /* MLB.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,6 +347,7 @@
 				A46D72DC1E92E8EB00CF0369 /* AppDelegate.swift in Sources */,
 				A4CE25781EA388C10011EEB3 /* LessonPageController.swift in Sources */,
 				A46D73031E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
+				A4CEEC251EC951B200FA3575 /* MLB.xcdatamodeld in Sources */,
 				A46D730C1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A49B0D9B1EC1219C00EF972E /* ViewController.swift in Sources */,
 				A46D73101E95A28700CF0369 /* RemoveStudent.swift in Sources */,
@@ -363,6 +366,7 @@
 				A4CE25871EA96DC50011EEB3 /* LessonViewController.swift in Sources */,
 				A46D73121E96F90900CF0369 /* ViewController.swift in Sources */,
 				A46D72DD1E92E8F700CF0369 /* AppDelegate.swift in Sources */,
+				A4CEEC261EC951B300FA3575 /* MLB.xcdatamodeld in Sources */,
 				A46D73041E94539E00CF0369 /* Student+CoreDataClass.swift in Sources */,
 				A46D730D1E94539E00CF0369 /* Lesson+CoreDataProperties.swift in Sources */,
 				A46D73111E95A28700CF0369 /* RemoveStudent.swift in Sources */,
